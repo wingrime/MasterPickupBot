@@ -52,6 +52,7 @@ func main() {
 		},
 	}
 	for message := range messages {
+		logger.Printf("Req %s from user %s ", message.Text, message.Sender.FirstName)
 		if message.Text == "/start" {
 			bot.SendMessage(message.Chat, "Привет, я раскажу тебе как двигать тазом, "+message.Sender.FirstName+"!", &sendOptions)
 		} else {
