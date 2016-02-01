@@ -20,7 +20,7 @@ var (
 )
 
 func processGeneralMessage(str string, dict []string) string {
-	return "Он сказал: " + dict[rand.Intn(len(dict))]
+	return dict[rand.Intn(len(dict))]
 }
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
